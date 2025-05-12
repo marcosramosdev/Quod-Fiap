@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "br.com.fiap.trabalhoquod"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "br.com.fiap.trabalhoquod"
@@ -62,6 +62,7 @@ dependencies {
     implementation(libs.androidx.espresso.core)
     implementation(libs.play.services.mlkit.text.recognition.common)
     implementation(libs.play.services.mlkit.text.recognition)
+    implementation(libs.androidx.activity.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -78,6 +79,7 @@ dependencies {
     implementation("androidx.camera:camera-core:1.3.4")
     runtimeOnly("androidx.camera:camera-lifecycle:1.4.0")
     runtimeOnly("androidx.camera:camera-view:1.4.0")
+    
     implementation ("io.coil-kt:coil-compose:2.2.2")
 
     // CameraX core library using the camera2 implementation

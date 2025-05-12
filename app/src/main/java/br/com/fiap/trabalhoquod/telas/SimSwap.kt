@@ -16,7 +16,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.FragmentActivity
-import android.content.Context
 
 class SimSwap : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
