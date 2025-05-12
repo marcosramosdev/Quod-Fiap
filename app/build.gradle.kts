@@ -64,6 +64,17 @@ dependencies {
     implementation(libs.play.services.mlkit.text.recognition)
     implementation(libs.androidx.activity.ktx)
 
+    implementation(libs.okhttp)
+
+    // Coil para carregamento de imagens
+    implementation(libs.coil.compose)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android.v139)
+    implementation(libs.face.detection.v1615)
+    implementation(libs.kotlinx.coroutines.play.services)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -74,29 +85,23 @@ dependencies {
 
 
 
-    implementation("androidx.biometric:biometric:1.1.0")
-    runtimeOnly("com.google.mlkit:face-detection:16.1.5")
-    implementation("androidx.camera:camera-core:1.3.4")
-    runtimeOnly("androidx.camera:camera-lifecycle:1.4.0")
-    runtimeOnly("androidx.camera:camera-view:1.4.0")
+    implementation(libs.androidx.biometric)
+    runtimeOnly(libs.face.detection)
+    implementation(libs.androidx.camera.core)
+    runtimeOnly(libs.androidx.camera.lifecycle)
+    runtimeOnly(libs.androidx.camera.view)
     
-    implementation ("io.coil-kt:coil-compose:2.2.2")
+    implementation (libs.coil.compose.v222)
 
-    // CameraX core library using the camera2 implementation
-    val camerax_version = "1.5.0-alpha03"
-    // The following line is optional, as the core library is included indirectly by camera-camera2
-    implementation("androidx.camera:camera-core:${camerax_version}")
-    implementation("androidx.camera:camera-camera2:${camerax_version}")
-    // If you want to additionally use the CameraX Lifecycle library
-    implementation("androidx.camera:camera-lifecycle:${camerax_version}")
-    // If you want to additionally use the CameraX VideoCapture library
-    implementation("androidx.camera:camera-video:${camerax_version}")
-    // If you want to additionally use the CameraX View class
-    implementation("androidx.camera:camera-view:${camerax_version}")
-    // If you want to additionally add CameraX ML Kit Vision Integration
-    implementation("androidx.camera:camera-mlkit-vision:${camerax_version}")
-    // If you want to additionally use the CameraX Extensions library
-    implementation("androidx.camera:camera-extensions:${camerax_version}")
-    runtimeOnly("androidx.biometric:biometric:1.1.0")
+
+
+    implementation(libs.androidx.camera.core.v150alpha03)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle.v150alpha03)
+    implementation(libs.androidx.camera.video)
+    implementation(libs.androidx.camera.view.v150alpha03)
+    implementation(libs.androidx.camera.mlkit.vision)
+    implementation(libs.androidx.camera.extensions)
+    runtimeOnly(libs.androidx.biometric)
 
 }
